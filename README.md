@@ -1,2 +1,2 @@
-# large-scale-graph-algorithms-slides
+# Large-scale Graph Algorithms
 Slides of the course
