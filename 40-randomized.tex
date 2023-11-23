@@ -34,7 +34,7 @@
 		}
 		\Return{\((A,B)\)}
 	\end{algorithm}
-
+\pause
 	\begin{block}{Lemma 1 (to prove)}
 		The expected value of the number of edges in the cut \((A,B)\) is at least \(m/2\)
 	\end{block}
@@ -45,7 +45,7 @@
 \end{frame}
 
 \begin{frame}[fragile]
-	\frametitle{Proof of Lemma 1}
+	\frametitle{Proof of Lemma 2}
 
 
 	\begin{block}{Lemma 2}
@@ -53,10 +53,10 @@
 			p = \text{Pr}\left(C(A,B) \ge \frac{m}{2} \right) \ge \frac{1}{m/2 + 1}\notag
 		\end{equation}
 	\end{block}
-
+\pause
 	\begin{align}
 		\frac{m}{2} = \textbf{E}[C(A,B)] & = \sum_{i\le \frac{m}{2}-1} i\ \text{Pr}\left(C(A,B) = i\right) +  \sum_{i\ge \frac{m}{2}} i\ \text{Pr}\left(C(A,B) = i\right) \notag \\
-		                                 & \le \left(1-p\right)\left(\frac{m}{2} - 1 \right) + pm \notag                                                                         \\
+\onslide<3->{	                                & \le \left(1-p\right)\left(\frac{m}{2} - 1 \right) + pm \notag                                                                         \\}
 		                                 & \Rightarrow p \ge \frac{1}{m/2+1} \notag
 	\end{align}
 \end{frame}
@@ -67,7 +67,7 @@
 	\begin{block}{Lemma (to prove)}
 		Let \g be a undirected graph.
 		Then \g has an independent set with at least \(\frac{n^{2}}{4m}\) vertices.
-	\end{block}
+	\end{block}\pause
 
 	Hint 1: \(d = \frac{2m}{n}\) is the average degree.
 
@@ -81,11 +81,11 @@
 		      Sample $S\gets $ keep each vertex with probability $\frac{1}{d}$
 		\item
 		      For each edge in the sample, remove one of its endpoints.
-	\end{enumerate}
+	\end{enumerate}\pause
 	\begin{block}{Proof: after step 1}
 		$$\textbf{E}[|S|] = \frac{n}{d}; \qquad
 			\textbf{E}[\text{number of edges in }S] \ge \frac{nd}{2} \cdot \frac{1}{d^{2}} = \frac{n}{2d}$$\\
-	\end{block}
+	\end{block}\pause
 	\begin{block}{Proof: after step 2}
 		For each edge, we remove at most a vertex.
 		Hence
